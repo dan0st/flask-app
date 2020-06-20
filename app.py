@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import requests
 
-
+# app on https://fl-sk-app.herokuapp.com/
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/turism'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
@@ -102,4 +102,4 @@ def post_delete(id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    app.run(use_reloader=True)
