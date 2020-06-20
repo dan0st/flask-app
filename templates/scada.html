@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_grid.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext">
+</head>
+
+<body>
+    <div class="grid">
+        <div class="menu">
+            <div class="menu__logo">
+                <img class="menu__logo_img" src="/static/img/8_122645.svg" alt="">
+                <div class="menu__logo_title">SCADA</div>
+            </div>
+            <div class="menu__info">
+                <div class="button">
+                    <img src="/static/img/mail.svg" alt="" class="mail">
+                </div>
+                <div class="button">
+                    <img src="/static/img/slack.svg" alt="" class="slack">
+                </div>
+                <div class="button">
+                    <img src="/static/img/github.svg" alt="" class="github">
+                </div>
+            </div>
+            <div class="menu__auth">
+                <div class="menu__auth_title">Авторизация</div>
+                <img src="/static/img/user_auth.svg" alt="" class="menu__auth_img">
+
+            </div>
+        </div>
+
+        <div class="side">
+
+            <div class="side__menu"> 
+                <div class="side__menu_title">
+                    Основные возможности
+                </div>
+                <div class="side__menu_item">
+                    <img class="side__menu_item_img" src="/static/img/team.svg" alt="">
+                    <div class="side__menu_item_title">
+                        <p>Сотрудники</p>
+                    </div>
+                </div>
+                <div class="side__menu_item">
+                    <img class="side__menu_item_img" src="/static/img/schedule.svg" alt="">
+                    <div class="side__menu_item_title">
+                        <p>Планирование</p>
+                    </div>
+                </div>
+                <div class="side__menu_item">
+                    <img class="side__menu_item_img" src="/static/img/machines.svg" alt="">
+                    <div class="side__menu_item_title">
+                        <p>Оборудование</p>
+                    </div>
+                </div>
+            </div>
+            <div class="side__menu">
+                <div class="side__menu_title">
+                    Дополнительные возможности
+                </div>
+                <div class="side__menu_item">
+                    <div class="side__menu_item_title">Добавление сотрудника</div>
+                </div>
+                <div class="side__menu_item">
+                    <div class="side__menu_item_title">Добавление оборудование</div>
+                </div>
+                <div class="side__menu_item">
+                    <div class="side__menu_item_title">Отчеты</div>
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="grafics">
+                <div id="busy" class="grafic">
+
+                </div>
+                <div id="power" class="grafic">
+
+                </div>
+                <div id="volume" class="grafic">
+
+                </div>
+                <div id="energy" class="grafic">
+
+                </div>
+
+            </div>
+            <div class="machines">
+                <div class="machine">
+
+                    <div class="machine__name">
+                        <p class="machine__name_name" id="machine__name_name">Токарный станок</p>
+                        <p class="machine__name_model" id="machine__name_model">Model</p>
+                        <p class="machine__name_manufacturer" id="machine__name_manufacturer">Manufacturer</p>
+                    </div>
+                    <div class="machine__status">
+                        <img src="/static/img/play-button.svg" alt="" class="machine__state_img">
+                        <div class="machine__status_title">
+                            <p>Work</p>
+                        </div>
+                    </div>
+                    <div class="machine__info">
+                        <img class="machine__img" src="/static/img/milling-machine.svg" alt="">
+                    </div>
+                    <div class="machine__info_params">
+                        <table>
+                            <tr>
+                                <th colspan="2">Линейные оси</th>
+                                
+                            </tr>
+                            <tr>
+                                <td id="X">name</td>
+                                <td id="X_type">subType</td>
+                                <td id="X_value">value</td>
+                            </tr>
+                            <tr>
+                                <td id="Y">name</td>
+                                <td id="Y_type">subType</td>
+                                <td id="Y_value">value</td>
+                            </tr>
+                            <tr>
+                                <td id="Z">name</td>
+                                <td id="Z_type">subType</td>
+                                <td id="Z_value">value</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Поворотные оси</th>
+                                
+                            </tr>
+                            <tr>
+                                <td id="C">name</td>
+                                <td id="C_type">subType</td>
+                                <td id="C_value">value</td>
+                            </tr>
+                            
+                            <tr>
+                                <th colspan="2">ПЛК</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>mode</td>
+                                <td id="mode">value_mode</td>
+                            </tr>
+                            <tr>
+                                <td >program</td>
+                                <td id="program">value_program</td>
+                            </tr>
+                            <tr>
+                                <td>line</td>
+                                <td id="line">value_line</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+                <div class="machine">
+
+                    <div class="machine__name">
+                        <p>Turn2323</p>
+                    </div>
+                    <div class="machine__status">
+                        <img src="/static/img/stop.svg" alt="" class="machine__state_img">
+                        <div class="machine__status_title">
+                            <p>Stoped</p>
+                        </div>
+                    </div>
+                    <div class="machine__info">
+                        <img class="machine__img" src="/static/img/3d-printer.svg" alt="">
+                    </div>
+                    <div class="machine__info_params">params</div>
+                </div>
+                <div class="machine">
+
+                    <div class="machine__name">
+                        <p>Milling 12345</p>
+                    </div>
+                    <div class="machine__status">
+                        <img src="/static/img/pause.svg" alt="" class="machine__state_img">
+                        <div class="machine__status_title">
+                            <p>Pause</p>
+
+                        </div>
+                    </div>
+                    <div class="machine__info">
+                        <img class="machine__img" src="/static/img/plastic.svg" alt="">
+                    </div>
+                    <div class="machine__info_params">
+                        params
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+    <script>
+        anychart.onDocumentLoad(function () {
+            // create chart and set data
+            // as Array of Arrays
+            var chart = anychart.pie([
+                ["Токарь", 5],
+                ["Фрезеровщик", 7],
+                ["Метролог", 9],
+                ["Гимнаст", 12]
+            ]);
+            chart.title("Загруженность");
+            chart.container("busy").draw();
+        });
+
+        anychart.onDocumentLoad(function () {
+            // create chart and set data
+            // as Array of Arrays
+            var chart = anychart.line()
+            chart.data({
+                header: ["#", "Заготовки", "Обработка", "Вспомогательные"],
+                rows: [
+                    ["Токарная", 5, 4, 6, 7, 4],
+                    ["Фрез-ая", 7, 9, 8, 12, 6],
+                    ["Адитивная", 9, 12, 6, 6, 8],
+                    ["Шлиф-ая", 12, 15, 9, 7, 4]
+                ]
+            });
+            chart.title("Производительность");
+            chart.legend(true);
+            chart.container("power").draw();
+        });
+        anychart.onDocumentLoad(function () {
+            // create chart and set data
+            // as Array of Objects
+            var chart = anychart.column();
+            chart.data({
+                header: ["#", "Инструмент", "Оборудование", "Система"],
+                rows: [
+                    { x: "ПН", usd: 5, eur: 4, pound: 3 },
+                    { x: "ВТ", usd: 3, eur: 3, pound: 3 },
+                    { x: "СР", usd: 2, eur: 5, pound: 3 },
+                    { x: "ЧТ", usd: 4, eur: 2, pound: 4 }
+                ]
+            });
+            chart.title("Интенсивность отказов");
+            chart.legend(true);
+            chart.container("volume").draw();
+        });
+
+        anychart.onDocumentLoad(function () {
+            // create chart and set data
+            // as Array of Objects
+            // the biggest point is marked with individually conigured marker
+            var chart = anychart.line([
+                { x: "Winter", value: 5 },
+                { x: "Spring", value: 9, marker: { enabled: true, type: "star5", fill: "Gold" } },
+                { x: "Summer", value: 7 },
+                { x: "Fall", value: 1 }
+            ]);
+            chart.title("Аварийные ситуации");
+            chart.container("energy").draw();
+        });
+    </script>
+    <script>
+        function getRandomInt() {
+            return Math.floor(Math.random() * (999 - 1)) + 1;
+        }
+        var socket = new WebSocket("ws://127.0.0.1:5678");
+        socket.onopen = function () {
+            alert("Соединение установлено");
+        };
+        socket.onclose = function (event) {
+            if (event.wasClean) {
+                alert('Соединение закрыто чисто');
+            } else {
+                alert('Обрыв соединения');
+            }
+            alert('Код: ' + event.code + ' причина: ' + event.reason);
+        };
+
+        socket.onmessage = function (event) {
+            /*alert('Получены данные :::: ' + event.data);*/
+            var result = JSON.parse(event.data);
+
+            var device = result.Devices[0];
+            console.log(device);
+            var machine_name_params = [device.name, device.Description.model, device.Description.manufacturer];
+            var linear_axes = [[device.Axes.Linear.X.name, device.Axes.Linear.X.DataItems.Xposition.subType, 100], [device.Axes.Linear.Y.name, device.Axes.Linear.Y.DataItems.Yposition.subType, getRandomInt()], [device.Axes.Linear.Z.name, device.Axes.Linear.Z.DataItems.Zposition.subType, 332]];
+            console.log(machine_name_params);
+            console.log(linear_axes);
+            var rotary_axes = [[device.Axes.Rotary.C.name, device.Axes.Rotary.C.DataItems.Cposition.subType, getRandomInt()], [device.Axes.Rotary.A.name, device.Axes.Rotary.A.DataItems.Aposition.subType, getRandomInt()]];
+            console.log(rotary_axes);
+            var controller = [device.Controller.name, device.Controller.Path.DataItems.mode.type, "value_mode", device.Controller.Path.DataItems.program.type, "value_program", device.Controller.Path.DataItems.line.type, "value_line"];
+            console.log(controller);
+            var one = document.getElementById("machine__name_name");
+            var two = document.getElementById("machine__name_model");
+            var three = document.getElementById("machine__name_manufacturer");
+            one.textContent = machine_name_params[0];
+            var machine_names = [one, two, three];
+            console.log(machine_names);
+
+            var X = [document.getElementById("X"),document.getElementById("X_type"),document.getElementById("X_value")];
+            var Y = [document.getElementById("Y"),document.getElementById("Y_type"),document.getElementById("Y_value")];
+            var Z = [document.getElementById("Z"),document.getElementById("Z_type"),document.getElementById("Z_value")];
+            for(var i=0; i < machine_names.length; i++) {
+                console.log("+machine_names[i]");
+                machine_names[i].textContent = machine_name_params[i];
+            };
+
+            
+            /*for (var i=0;i < linear_axes.length; ){};*/
+        };
+
+    </script>
+</body>
+
+</html>
